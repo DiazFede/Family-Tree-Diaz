@@ -10,6 +10,8 @@ namespace Library
 
         private List<Node> children = new List<Node>();
 
+        public Person Person { get; set; }
+
         public int Number {
             get
             {
@@ -33,5 +35,10 @@ namespace Library
         {
             this.children.Add(n);
         }
+           public Node(Person person)
+         {
+            Person = person;
+        }
+
     }
 }
