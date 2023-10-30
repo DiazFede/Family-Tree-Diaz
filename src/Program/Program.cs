@@ -18,11 +18,15 @@ namespace Program
             Node Node = new Node();//nodo hoja
            
 
-            Abuelo.AddChildren(Padre);
-            Abuela.AddChildren(Madre);
-            Padre.AddChildren(Hijo);
-            Madre.AddChildren(Hija);
-            Hijo.AddChildren(Nieto);
+            AbueloNode.AddChildren(Padre);
+            AbuelaNode.AddChildren(Madre);
+            MadreNode.AddChildren(Padre);
+            PadreNode.AddChildren(Madre);
+            HijaNode.AddChildren(Padre);
+            HijoNode.AddChildren(Madre);
+            NietoNode.AddChildren(Padre);
+            NietaNode.AddChildren(Madre);
+          
 
             // visitar el árbol aquí
 
