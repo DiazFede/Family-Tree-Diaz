@@ -13,17 +13,6 @@ namespace Library
         {
             this.Name=name;
             this.Age=age;
-
         }
-
-
-
-
-
     }
-
-
-
-
-
 }
