@@ -4,26 +4,20 @@ using System;
 
 namespace Library
 {
-    public class Node
+    public class Node<T>
     {
         private int number;
+        private List<Node<T>> children = new List<Node<T>>();
+        public T Data { get; set; }
 
-        private List<Node> children = new List<Node>();
-
-        public Person Person { get; set; }
-
-        public int Number {
-            get
-            {
-                return this.number;
-            }
+        public int Number
+        {
+            get { return this.number; }
         }
 
-        public ReadOnlyCollection<Node> Children {
-            get
-            {
-                return this.children.AsReadOnly();
-            }
+        public ReadOnlyCollection<Node<T>> Children
+        {
+            get { return this.children.AsReadOnly(); }
         }
 
         public Node(int number)
@@ -31,14 +25,15 @@ namespace Library
             this.number = number;
         }
 
-        public void AddChildren(Node n)
+        public Node(T data)
         {
-            this.children.Add(n);
-        }
-           public Node(Person person)
-         {
-            Person = person;
+            Data = data;
         }
 
+        public void AddChildren(Node<T> child)
+        {
+            this.children.Add(child);
+        }
     }
 }
+
