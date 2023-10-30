@@ -7,24 +7,25 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Node n1 = new Node(1);//nodo hoja
-            Node n2 = new Node(2);//hijo de node 1
-            Node n3 = new Node(3);//hijo de node 1
-            Node n4 = new Node(4);//hijo de node 2
-            Node n5 = new Node(5);//hijo de node 2
-            Node n6 = new Node(6);//hijo de node 3
-            Node n7 = new Node(7);//hijo de node 3
+            Person Abuelo = new Person("Abuelo", 85);                        Person Abuelo = new Person("Abuelo", 75);
+            Person Abuela = new Person("Abuela", 88);
+            Person Madre = new Person("Madre", 65);
+            Person Padre = new Person("Padre", 60);
+            Person Hijo = new Person("Hijo", 25);
+            Person Hija = new Person("Hija", 34);
+            Person Nieta = new Person("Nieta", 5);
+            Person Nieto = new Person("Nieto", 3);
+            Node Node = new Node();//nodo hoja
+           
 
-            n1.AddChildren(n2);
-            n1.AddChildren(n3);
-
-            n2.AddChildren(n4);
-            n2.AddChildren(n5);
-
-            n3.AddChildren(n6);
-            n3.AddChildren(n7);
+            Abuelo.AddChildren(Padre);
+            Abuela.AddChildren(Madre);
+            Padre.AddChildren(Hijo);
+            Madre.AddChildren(Hija);
+            Hijo.AddChildren(Nieto);
 
             // visitar el árbol aquí
+
         }
     }
 }
