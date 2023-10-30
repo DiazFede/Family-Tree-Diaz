@@ -1,6 +1,6 @@
 using Library;
 
-namespace Visitor
+namespace Library
 {
     public abstract class Visitor
     {
