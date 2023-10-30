@@ -16,7 +16,7 @@ namespace Library
         {
             TotalAge+= person.Age;
         }
-        public override void Visit(Node node)
+        public override void Visit(Node<Person> node)
         {
 
         }
