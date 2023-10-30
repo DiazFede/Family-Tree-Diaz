@@ -16,14 +16,15 @@ namespace Program
             Person Nieta = new Person("Nieta", 5);
             Person Nieto = new Person("Nieto", 3);
             
-            Node AbueloNode = new Node(Abuelo);//nodo hoja
-            Node AbuelaNode = new Node(Abuela);//nodo hoja
-            Node MadreNode = new Node(Madre);
-            Node PadreNode = new Node (Padre);
-            Node HijoNode = new Node (Hijo);
-            Node HijaNode = new Node(Hija);
-            Node NietaNode= new Node (Nieta);
-            Node NietoNode= new Node (Nieto);
+        Node<Person> AbueloNode = new Node<Person>(Abuelo);
+        Node<Person> AbuelaNode = new Node<Person>(Abuela);
+        Node<Person> MadreNode = new Node<Person>(Madre);
+        Node<Person> PadreNode = new Node<Person>(Padre);
+        Node<Person> HijoNode = new Node<Person>(Hijo);
+        Node<Person> HijaNode = new Node<Person>(Hija);
+        Node<Person> NietaNode = new Node<Person>(Nieta);
+        Node<Person> NietoNode = new Node<Person>(Nieto);
+
 
            
 
@@ -32,6 +33,7 @@ namespace Program
             PadreNode.AddChildren(HijoNode);
             MadreNode.AddChildren(HijaNode);
             HijoNode.AddChildren(NietoNode);
+            HijaNode.AddChildren(NietaNode);
 
             // visitar el árbol aquí
 
